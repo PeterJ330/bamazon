@@ -1,5 +1,5 @@
 var mysql = require()("mysql");
-var inquire = require("inquirer");
+var inquirer = require("inquirer");
 
 var connection = mysql.createConnection({
     host: "localhost", 
@@ -11,6 +11,14 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err) {
     if(err) throw err;
-    // runSearch();
     console.log("You are connected as id " +connection.threadId + "\n");
+    productDisplay();
 });
+
+function productDisplay() {
+    var query = "SELECT * FROM bamazon";
+    connection.query(query, function(err, res) {
+        console.log(res);
+    })
+};
+
