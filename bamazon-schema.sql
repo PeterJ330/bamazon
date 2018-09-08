@@ -25,3 +25,15 @@ INSERT INTO products (product_name, department_name, price, stock_quantity)
      ("Product Ten", "Department Ten", 16.50, 110);
 
 SELECT * FROM products;
+
+INSERT INTO products (product_name, department_name, price, stock_quantity) 
+    VALUES ("Cast Iron Skillet", "Home & Kitchen", 49.85, 40),
+     ("Programmable Pressure Cooker", "Home & Kitchen", 119.95, 35),
+     ("Chef's Knife", "Home & Kitchen", 97.99, 75),
+     ("Tea Kettle", "Home & Kitchen", 24.99, 90),
+     ("Wireless Headphones", "Electronics", 54.99, 60),
+     ("Roomba", "Electronics", 279.99, 25),
+     ("Nest Thermostat ", "Electronics", 210.00, 50),
+     ("Lawn Mower", "Garden and Outdoor", 399.00, 40),
+     ("Gas Grill", "Garden and Outdoor", 159.99, 30),
+     ("Garden Shears", "Garden and Outdoor", 14.50, 110);
