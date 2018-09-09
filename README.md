@@ -5,4 +5,5 @@ The following occurs when the user enters "node bamazonCustomer.js" in command l
     1) Welcome message is displayed: " ** Welcome to Bamazon ** "
 
     2) Inventory table is displayed showing the available products and their attributes:
-        ![alt text](/images/initial_inventory.png)
+        ![Image of Opening Screen]
+        (https://github.com/PeterJ330/bamazon/blob/master/images/initial_inventory.png)
