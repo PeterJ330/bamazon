@@ -33,47 +33,47 @@ The following occurs when the user enters "node bamazonCustomer.js" in the comma
     node bamazonCustomer.js 
 
 #### Lines 36 - 76 is data copied from the terminal displaying the output of the above actions...
-                                    ** Welcome to Bamazon **
-                                        Current Inventory
-                        +--+----------------------------+-------+--------+
-                        |ID|             Name           |Price  |In Stock|
-                        |1 |Cast Iron Skillet           |$49.85 |50      |
-                        |2 |Programmable Pressure Cooker|$119.95|30      |
-                        |3 |Chef's Knife                |$97.99 |40      |
-                        |4 |Tea Kettle                  |$24.99 |60      |
-                        |5 |Wireless Headphones         |$54.99 |80      |
-                        |6 |Roomba                      |$279.99|25      |
-                        |7 |Nest Thermostat             |$210.00|35      |
-                        |8 |Lawn Mower                  |$399.00|15      |
-                        |9 |Gas Grill                   |$159.99|20      |
-                        |10|Garden Shears               |$14.50 |100     |
-                        +--+----------------------------+-------+--------+
+                                        ** Welcome to Bamazon **
+                                            Current Inventory
+                            +--+----------------------------+-------+--------+
+                            |ID|             Name           |Price  |In Stock|
+                            |1 |Cast Iron Skillet           |$49.85 |50      |
+                            |2 |Programmable Pressure Cooker|$119.95|30      |
+              ######        |3 |Chef's Knife                |$97.99 |40      |
+                            |4 |Tea Kettle                  |$24.99 |60      |
+                            |5 |Wireless Headphones         |$54.99 |80      |
+                            |6 |Roomba                      |$279.99|25      |
+                            |7 |Nest Thermostat             |$210.00|35      |
+                            |8 |Lawn Mower                  |$399.00|15      |
+                            |9 |Gas Grill                   |$159.99|20      |
+                            |10|Garden Shears               |$14.50 |100     |
+                            +--+----------------------------+-------+--------+
 
 
-                        ? Enter the ID of the product you would like to purchase. 3
-                        ? How many units would you like? 6
+                            ? Enter the ID of the product you would like to purchase. 3
+                            ? How many units would you like? 6
 
 
-                        -- Order Summary -- 
-                        Item: Chef's Knife
-                        Quantity: 6
-                        Order Total: $587.94
+                            -- Order Summary -- 
+              ######        Item: Chef's Knife
+                            Quantity: 6
+                            Order Total: $587.94
 
 
-                                        Current Inventory
-                        +--+----------------------------+-------+--------+
-                        |ID|             Name           |Price  |In Stock|
-                        |1 |Cast Iron Skillet           |$49.85 |50      |
-                        |2 |Programmable Pressure Cooker|$119.95|30      |
-                        |3 |Chef's Knife                |$97.99 |34      |
-                        |4 |Tea Kettle                  |$24.99 |60      |
-                        |5 |Wireless Headphones         |$54.99 |80      |
-                        |6 |Roomba                      |$279.99|25      |
-                        |7 |Nest Thermostat             |$210.00|35      |
-                        |8 |Lawn Mower                  |$399.00|15      |
-                        |9 |Gas Grill                   |$159.99|20      |
-                        |10|Garden Shears               |$14.50 |100     |
-                        +--+----------------------------+-------+--------+
-========================================================================================================================
+                                            Current Inventory
+                            +--+----------------------------+-------+--------+
+                            |ID|             Name           |Price  |In Stock|
+                            |1 |Cast Iron Skillet           |$49.85 |50      |
+                            |2 |Programmable Pressure Cooker|$119.95|30      |
+              ######        |3 |Chef's Knife                |$97.99 |34      |
+                            |4 |Tea Kettle                  |$24.99 |60      |
+                            |5 |Wireless Headphones         |$54.99 |80      |
+                            |6 |Roomba                      |$279.99|25      |
+                            |7 |Nest Thermostat             |$210.00|35      |
+                            |8 |Lawn Mower                  |$399.00|15      |
+                            |9 |Gas Grill                   |$159.99|20      |
+                            |10|Garden Shears               |$14.50 |100     |
+                            +--+----------------------------+-------+--------+
+=========================================================================================
 
                                 

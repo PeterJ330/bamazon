@@ -62,21 +62,14 @@ function purchaseQuestions() {
                 message: "How many units would you like?"
             }
         ]).then(function (answer) {
-            switch (answer.id) {
-                case "1":
-                case "2":
-                case "3":
-                case "4":
-                case "5":
-                case "6":
-                case "7":
-                case "8":
-                case "9":
-                case "10":
-                    productId = answer.id;
-                    quantity = answer.amount;
-                    itemPurchase();
-            }
+            productId = answer.id;
+            quantity = answer.amount;
+            // if (stock_quantity < quantity) {
+
+            // } else {
+            //     itemPurchase();
+            // }  
+            itemPurchase();
         })
 };
 setTimeout(purchaseQuestions, 500);
@@ -106,7 +99,8 @@ function calculateInventory() {
     var query = "UPDATE products SET stock_quantity = stock_quantity-"+ quantity +" WHERE item_id = "+ productId;
     connection.query(query, function (err, res) {
     })
-    
+    setTimeout(viewInventory, 1500);
+    setTimeout(purchaseQuestions, 2000);
 };
 // ====================================================================================================================================================
 //                            
