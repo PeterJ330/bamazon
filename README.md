@@ -36,7 +36,8 @@ note: If the quantity the user selected is greater than the quantity in stock th
     display the following message:
         * "Insufficient quantity. There are "+ res[0].stock_quantity +" "+ res[0].product_name + "(s) left in stock."
         * The user will then be prompted again to choose a product for purchasing.
-
+            ![Image of output when quantity in stock is insufficient]
+            (https://github.com/PeterJ330/bamazon/blob/master/images/insufficient_quantity.png)
 
 #### The following is data copied from the terminal displaying the output of the above actions...
                                         ** Welcome to Bamazon **
@@ -80,7 +81,9 @@ note: If the quantity the user selected is greater than the quantity in stock th
                             |9 |Gas Grill                   |$159.99|20      |
                             |10|Garden Shears               |$14.50 |100     |
                             +--+----------------------------+-------+--------+
-========================================================================================                            
+
+
+
 
                                         ** Welcome to Bamazon **
                                             Current Inventory
@@ -104,6 +107,6 @@ note: If the quantity the user selected is greater than the quantity in stock th
 
 
                             Insufficient quantity. There are 15 Lawn Mower(s) left in stock.
-========================================================================================
+
 
                                 
