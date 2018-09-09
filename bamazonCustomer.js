@@ -24,6 +24,7 @@ connection.connect(function (err) {
 });
 
 viewInventory();
+setTimeout(purchaseQuestions, 500);
 // ====================================================================================================================================================
 //                        VIEW INVENTORY FUNCTION
 // ====================================================================================================================================================
@@ -64,15 +65,10 @@ function purchaseQuestions() {
         ]).then(function (answer) {
             productId = answer.id;
             quantity = answer.amount;
-            // if (stock_quantity < quantity) {
-
-            // } else {
-            //     itemPurchase();
-            // }  
             itemPurchase();
         })
 };
-setTimeout(purchaseQuestions, 500);
+
 
 // ====================================================================================================================================================
 //                            ITEM PURCHASE FUNCTION
@@ -80,13 +76,26 @@ setTimeout(purchaseQuestions, 500);
 function itemPurchase() {
     connection.query("SELECT * FROM products WHERE ?", { item_id: productId }, function (err, res) {
         console.log(lineBreak);
-        console.log(" -- Order Summary -- ")
-        console.log("Item: " + res[0].product_name);
-        console.log("Quantity: " + quantity);
-        var totalPrice = res[0].price * quantity;
-        console.log("Order Total: $" + totalPrice.toFixed(2));
-        console.log(lineBreak);
-        calculateInventory();
+        if (res[0].stock_quantity < quantity) {
+            console.log("Insufficient quantity. There are "+ res[0].stock_quantity +" "+ res[0].product_name + "(s) left in stock.")
+            purchaseQuestions();
+            // setTimeout(purchaseQuestions, 500);
+        } else {
+            console.log(" -- Order Summary -- ")
+            console.log("Item: " + res[0].product_name);
+            console.log("Quantity: " + quantity);
+            var totalPrice = res[0].price * quantity;
+            console.log("Order Total: $" + totalPrice.toFixed(2));
+            console.log(lineBreak);
+            calculateInventory();
+        }
+        // console.log(" -- Order Summary -- ")
+        // console.log("Item: " + res[0].product_name);
+        // console.log("Quantity: " + quantity);
+        // var totalPrice = res[0].price * quantity;
+        // console.log("Order Total: $" + totalPrice.toFixed(2));
+        // console.log(lineBreak);
+        // calculateInventory();
     })
 
 };
@@ -96,7 +105,7 @@ function itemPurchase() {
 // ====================================================================================================================================================
 function calculateInventory() {
     // var query = "UPDATE products SET stock_quantity = quantity WHERE item_id = productId";
-    var query = "UPDATE products SET stock_quantity = stock_quantity-"+ quantity +" WHERE item_id = "+ productId;
+    var query = "UPDATE products SET stock_quantity = stock_quantity-" + quantity + " WHERE item_id = " + productId;
     connection.query(query, function (err, res) {
     })
     setTimeout(viewInventory, 1500);

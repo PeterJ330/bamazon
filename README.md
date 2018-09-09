@@ -34,7 +34,9 @@ The following occurs when the user enters "node bamazonCustomer.js" in the comma
 
 note: If the quantity the user selected is greater than the quantity in stock then the application will
     display the following message:
-        "Insufficient quantity, there are only 'stock_quantity' + 'product_name' left in stock. 
+        * "Insufficient quantity. There are "+ res[0].stock_quantity +" "+ res[0].product_name + "(s) left in stock."
+        * The user will then be prompted again to choose a product for purchasing.
+
 
 #### The following is data copied from the terminal displaying the output of the above actions...
                                         ** Welcome to Bamazon **
@@ -78,6 +80,30 @@ note: If the quantity the user selected is greater than the quantity in stock th
                             |9 |Gas Grill                   |$159.99|20      |
                             |10|Garden Shears               |$14.50 |100     |
                             +--+----------------------------+-------+--------+
-=========================================================================================
+========================================================================================                            
+
+                                        ** Welcome to Bamazon **
+                                            Current Inventory
+                            +--+----------------------------+-------+--------+
+                            |ID|             Name           |Price  |In Stock|
+                            |1 |Cast Iron Skillet           |$49.85 |50      |
+                            |2 |Programmable Pressure Cooker|$119.95|30      |
+                            |3 |Chef's Knife                |$97.99 |40      |
+                            |4 |Tea Kettle                  |$24.99 |60      |
+                            |5 |Wireless Headphones         |$54.99 |80      |
+                            |6 |Roomba                      |$279.99|25      |
+                            |7 |Nest Thermostat             |$210.00|35      |
+                         ** |8 |Lawn Mower                  |$399.00|15  **  |
+                            |9 |Gas Grill                   |$159.99|20      |
+                            |10|Garden Shears               |$14.50 |100     |
+                            +--+----------------------------+-------+--------+
+
+
+                            ? Enter the ID of the product you would like to purchase. 8
+                            ? How many units would you like? 20 **
+
+
+                            Insufficient quantity. There are 15 Lawn Mower(s) left in stock.
+========================================================================================
 
                                 
