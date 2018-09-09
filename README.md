@@ -1,6 +1,17 @@
 # bamazon
 bamazon is a node application that simulates an online shopping platform.
 
+Ten products were created in a MySQL Database named "bamazon".
+
+Each product in the "products" table has the following attributes (column values):
+    * item_id
+    * product_name
+    * department_name
+    * price
+    * stock_quantity
+
+    
+
 The following occurs when the user enters "node bamazonCustomer.js" in the command line:
     * Welcome message is displayed: " ** Welcome to Bamazon ** "
 
@@ -17,4 +28,52 @@ The following occurs when the user enters "node bamazonCustomer.js" in the comma
         ![Image of Order Summary]
         (https://github.com/PeterJ330/bamazon/blob/master/images/order_summary.png)
 
-        
+    * Once the Order Summary has displayed, a new inventory table will be displayed which will reflect the decrease in inventory based on the User's product selection and quantity purchased.
+
+    node bamazonCustomer.js 
+
+#### Lines 36 - 76 is data copied from the terminal displaying the output of the above actions...
+                                    ** Welcome to Bamazon **
+                                        Current Inventory
+                        +--+----------------------------+-------+--------+
+                        |ID|             Name           |Price  |In Stock|
+                        |1 |Cast Iron Skillet           |$49.85 |50      |
+                        |2 |Programmable Pressure Cooker|$119.95|30      |
+                        |3 |Chef's Knife                |$97.99 |40      |
+                        |4 |Tea Kettle                  |$24.99 |60      |
+                        |5 |Wireless Headphones         |$54.99 |80      |
+                        |6 |Roomba                      |$279.99|25      |
+                        |7 |Nest Thermostat             |$210.00|35      |
+                        |8 |Lawn Mower                  |$399.00|15      |
+                        |9 |Gas Grill                   |$159.99|20      |
+                        |10|Garden Shears               |$14.50 |100     |
+                        +--+----------------------------+-------+--------+
+
+
+                        ? Enter the ID of the product you would like to purchase. 3
+                        ? How many units would you like? 6
+
+
+                        -- Order Summary -- 
+                        Item: Chef's Knife
+                        Quantity: 6
+                        Order Total: $587.94
+
+
+                                        Current Inventory
+                        +--+----------------------------+-------+--------+
+                        |ID|             Name           |Price  |In Stock|
+                        |1 |Cast Iron Skillet           |$49.85 |50      |
+                        |2 |Programmable Pressure Cooker|$119.95|30      |
+                        |3 |Chef's Knife                |$97.99 |34      |
+                        |4 |Tea Kettle                  |$24.99 |60      |
+                        |5 |Wireless Headphones         |$54.99 |80      |
+                        |6 |Roomba                      |$279.99|25      |
+                        |7 |Nest Thermostat             |$210.00|35      |
+                        |8 |Lawn Mower                  |$399.00|15      |
+                        |9 |Gas Grill                   |$159.99|20      |
+                        |10|Garden Shears               |$14.50 |100     |
+                        +--+----------------------------+-------+--------+
+========================================================================================================================
+
+                                
