@@ -10,36 +10,40 @@ Each product in the "products" table has the following attributes (column values
     * price
     * stock_quantity
 
-    
-
 The following occurs when the user enters "node bamazonCustomer.js" in the command line:
-    * Welcome message is displayed: " ** Welcome to Bamazon ** "
+* Welcome message is displayed: " ** Welcome to Bamazon ** "
 
-    * Inventory table is displayed showing the available products and their attributes:
-        ![Image of Opening Screen]
-        (https://github.com/PeterJ330/bamazon/blob/master/images/initial_inventory.png)
+* Inventory table is displayed showing the available products and their attributes:
+![Image of Opening Screen]
+(https://github.com/PeterJ330/bamazon/blob/master/images/initial_inventory.png)
     
-    * After the initial inventory table is displayed the User will be prompted to Enter the ID of the product they want to purchase.
-    * Once a product has been selected, the application will prompt the User to select the quantity of the item they would like to purchase. 
-        ![Image of the first two prompts]
-        (https://github.com/PeterJ330/bamazon/blob/master/images/first_two_prompts.png)
+* After the initial inventory table is displayed the User will be prompted to Enter the ID of the product
+    they want to purchase.
+* Once a product has been selected, the application will prompt the User to enter the quantity of the item
+    they would like to purchase. 
+![Image of the first two prompts]
+(https://github.com/PeterJ330/bamazon/blob/master/images/first_two_prompts.png)
     
-    * After a product and quantity have been selected, the application will display the User's order summary containing the product_name, quantity and the Order Total:
-        ![Image of Order Summary]
-        (https://github.com/PeterJ330/bamazon/blob/master/images/order_summary.png)
+* After a product and quantity have been selected, the application will display the User's order summary
+    containing the product_name, quantity and the Order Total:
+![Image of Order Summary]
+(https://github.com/PeterJ330/bamazon/blob/master/images/order_summary.png)
 
-    * Once the Order Summary has displayed, a new inventory table will be displayed which will reflect the decrease in inventory based on the User's product selection and quantity purchased.
+* Once the Order Summary has displayed, a new inventory table will be displayed which will reflect the
+    decrease in inventory based on the User's product selection and quantity purchased.
 
-    node bamazonCustomer.js 
+note: If the quantity the user selected is greater than the quantity in stock then the application will
+    display the following message:
+        "Insufficient quantity, there are only 'stock_quantity' + 'product_name' left in stock. 
 
-#### Lines 36 - 76 is data copied from the terminal displaying the output of the above actions...
+#### The following is data copied from the terminal displaying the output of the above actions...
                                         ** Welcome to Bamazon **
                                             Current Inventory
                             +--+----------------------------+-------+--------+
                             |ID|             Name           |Price  |In Stock|
                             |1 |Cast Iron Skillet           |$49.85 |50      |
                             |2 |Programmable Pressure Cooker|$119.95|30      |
-              ######        |3 |Chef's Knife                |$97.99 |40      |
+                         ** |3 |Chef's Knife                |$97.99 |40      | 
                             |4 |Tea Kettle                  |$24.99 |60      |
                             |5 |Wireless Headphones         |$54.99 |80      |
                             |6 |Roomba                      |$279.99|25      |
@@ -55,8 +59,8 @@ The following occurs when the user enters "node bamazonCustomer.js" in the comma
 
 
                             -- Order Summary -- 
-              ######        Item: Chef's Knife
-                            Quantity: 6
+                            Item: Chef's Knife
+                         ** Quantity: 6
                             Order Total: $587.94
 
 
@@ -65,7 +69,7 @@ The following occurs when the user enters "node bamazonCustomer.js" in the comma
                             |ID|             Name           |Price  |In Stock|
                             |1 |Cast Iron Skillet           |$49.85 |50      |
                             |2 |Programmable Pressure Cooker|$119.95|30      |
-              ######        |3 |Chef's Knife                |$97.99 |34      |
+                         ** |3 |Chef's Knife                |$97.99 |34      |
                             |4 |Tea Kettle                  |$24.99 |60      |
                             |5 |Wireless Headphones         |$54.99 |80      |
                             |6 |Roomba                      |$279.99|25      |
